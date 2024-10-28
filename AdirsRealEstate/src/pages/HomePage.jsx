@@ -22,7 +22,7 @@ const HomePage = () => {
               <p>Awards for excellence</p>
             </div>
             <div className="box">
-              <h2>1200</h2>
+              <h2>2000</h2>
               <p>Houses already sold</p>
             </div>
           </div>
