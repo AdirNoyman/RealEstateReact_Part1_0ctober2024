@@ -1,3 +1,5 @@
+@use '../../responsive.scss';
+
 .searchBar {
   .type {
     button {
@@ -14,13 +16,11 @@
       }
 
       &:first-child {
-
         border-top-left-radius: 5px;
         border-right: none;
       }
 
       &:last-child {
-
         border-top-right-radius: 5px;
         border-left: none;
       }
@@ -34,10 +34,59 @@
     height: 64px;
     gap: 5px;
 
+    @include responsive.sm {
+      flex-direction: column;
+      border: none;
+    }
+
     input {
-        border: none;
-        padding: 0px 10px;
-        width: 200px;
+      border: none;
+      padding: 0px 10px;
+      width: 200px;
+
+      @include responsive.lg {
+        padding: 0px 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include responsive.md {
+        width: auto;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: auto;
+        }
+      }
+      @include responsive.sm {
+        padding: 20px;
+        border: 1px solid #999;
+      }
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: #d3a123;
+      flex: 1;
+
+      @include responsive.lg {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      @include responsive.md {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      @include responsive.sm {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
     }
   }
 }

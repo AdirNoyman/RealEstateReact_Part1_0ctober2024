@@ -47,7 +47,7 @@ const SearchBar = () => {
           placeholder="max price"
         />
         <button>
-          <FaSearch />
+          <FaSearch size={20} color="white" />
         </button>
       </form>
     </div>
