@@ -32,7 +32,6 @@
     display: flex;
     justify-content: space-between;
     height: 64px;
-    gap: 5px;
 
     @include responsive.sm {
       flex-direction: column;
@@ -42,28 +41,43 @@
     input {
       border: none;
       padding: 0px 10px;
-      width: 200px;
+      width: 100%;
+      border-left: 1px solid #999;
 
-      @include responsive.lg {
-        padding: 0px 5px;
-
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: 140px;
-        }
+      &:nth-child(1) {
+        border-left: none;
       }
 
-      @include responsive.md {
-        width: auto;
+      // @include responsive.lg {
+      //   padding: 0px 5px;
 
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: auto;
-        }
-      }
+      //   &:nth-child(2),
+      //   &:nth-child(3) {
+      //     width: 140px;
+      //   }
+      // }
+
+      // @include responsive.md {
+      //   padding: 0px 5px;
+
+      //   &:nth-child(2),
+      //   &:nth-child(3) {
+      //     width: auto;
+      //   }
+      // }
       @include responsive.sm {
-        padding: 20px;
         border: 1px solid #999;
+
+        padding: 2%;
+
+        &:nth-child(1) {
+          border-left: 1px solid #999;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-top: none;
+        }
       }
     }
 
@@ -71,17 +85,23 @@
       border: none;
       cursor: pointer;
       background-color: #d3a123;
-      flex: 1;
+      padding-left: 5%;
+      padding-right: 5%;
 
-      @include responsive.lg {
-        padding-left: 5%;
-        padding-right: 5%;
+      &:hover {
+
+        background-color: #a5790a;
       }
 
-      @include responsive.md {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
+      // @include responsive.lg {
+      //   padding-left: 5%;
+      //   padding-right: 5%;
+      // }
+
+      // @include responsive.md {
+      //   padding-left: 5%;
+      //   padding-right: 5%;
+      // }
 
       @include responsive.sm {
         padding-top: 10px;
