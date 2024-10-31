@@ -4,6 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    
 
   a {
     transition: all 0.4s ease;
@@ -19,9 +20,11 @@ nav {
 
   .left {
     flex: 3;
-    display: flex;
+    display: flex;    
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
+    
 
     .logo {
       font-weight: bold;
@@ -51,6 +54,7 @@ nav {
     justify-content: flex-end;
     background-color: #fcf5f3;
     height: 100%;
+    
 
     @include responsive.md {
       background-color: transparent;
@@ -98,14 +102,12 @@ nav {
       z-index: 100;
 
       &.active {
-
         right: 0;
       }
 
       @include responsive.sm {
-
         a {
-            display: initial;
+          display: initial;
         }
       }
     }
