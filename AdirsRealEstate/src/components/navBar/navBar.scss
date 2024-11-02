@@ -6,7 +6,10 @@ nav {
   align-items: center;
     
 
-  a {
+  .link {
+
+    font-size: small;
+
     transition: all 0.4s ease;
 
     @include responsive.sm {
@@ -23,7 +26,7 @@ nav {
     display: flex;    
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
     
 
     .logo {
@@ -60,7 +63,7 @@ nav {
       background-color: transparent;
     }
 
-    a {
+    .link {
       padding: 12px 24px;
       margin: 20px;
     }
@@ -106,7 +109,7 @@ nav {
       }
 
       @include responsive.sm {
-        a {
+        .link {
           display: initial;
         }
       }

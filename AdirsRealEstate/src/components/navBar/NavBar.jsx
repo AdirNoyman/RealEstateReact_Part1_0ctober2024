@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './navBar.scss';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
@@ -7,20 +8,20 @@ const NavBar = () => {
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <Link to={'/'} className="logo link">
           <img src="/logo.png" alt="company-logo" />
           <span>KickAssRealEstate</span>
-        </a>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact Us</a>
-        <a href="/agents">Agents</a>
+        </Link>
+        <Link to={"/"} className='link'>Home</Link>
+        <Link to={"/about"} className='link'>About</Link>
+        <Link to={"/contact"} className='link'>Contact Us</Link>
+        <Link to={"/agents"} className='link'>Agents</Link>
       </div>
       <div className="right">
-        <a href="/sign-in">Sign In</a>
-        <a href="/sign-up" className="sign-up">
+        <Link to={"/sign-in"} className='link'>Sign In</Link>
+        <Link to={"/sign-up"} className="sign-up link">
           Sign Up
-        </a>
+        </Link>
         <div className="menuIcon">
           <img
             src="/menu.png"
@@ -29,12 +30,12 @@ const NavBar = () => {
           />
         </div>
         <div className={isSideMenuOpen ? 'mobileMenu active' : 'mobileMenu'}>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact Us</a>
-          <a href="/agents">Agents</a>
-          <a href="/sign-in">Sign In</a>
-          <a href="/sign-up">Sign Up</a>
+          <Link to="/" className='link'>Home</Link>
+          <Link to="/about" className='link'>About</Link>
+          <Link to="/contact" className='link'>Contact Us</Link>
+          <Link to="/agents" className='link'>Agents</Link>
+          <Link to="/sign-in" className='link'>Sign In</Link>
+          <Link to="/sign-up" className='link'>Sign Up</Link>
         </div>
       </div>
     </nav>
