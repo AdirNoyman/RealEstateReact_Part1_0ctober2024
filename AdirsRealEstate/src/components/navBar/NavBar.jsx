@@ -12,14 +12,25 @@ const NavBar = () => {
           <img src="/logo.png" alt="company-logo" />
           <span>KickAssRealEstate</span>
         </Link>
-        <Link to={"/"} className='link'>Home</Link>
-        <Link to={"/about"} className='link'>About</Link>
-        <Link to={"/contact"} className='link'>Contact Us</Link>
-        <Link to={"/agents"} className='link'>Agents</Link>
+        <Link to={'/'} className="link">
+          Home
+        </Link>
+        <Link to={'/about'} className="link">
+          About
+        </Link>
+        <Link to={'/contact'} className="link">
+          Contact Us
+        </Link>
+        {/* tempolrarly i've put /list */}
+        <Link to={'/list'} className="link">
+          Agents
+        </Link>
       </div>
       <div className="right">
-        <Link to={"/sign-in"} className='link'>Sign In</Link>
-        <Link to={"/sign-up"} className="sign-up link">
+        <Link to={'/sign-in'} className="link">
+          Sign In
+        </Link>
+        <Link to={'/sign-up'} className="sign-up link">
           Sign Up
         </Link>
         <div className="menuIcon">
@@ -30,12 +41,24 @@ const NavBar = () => {
           />
         </div>
         <div className={isSideMenuOpen ? 'mobileMenu active' : 'mobileMenu'}>
-          <Link to="/" className='link'>Home</Link>
-          <Link to="/about" className='link'>About</Link>
-          <Link to="/contact" className='link'>Contact Us</Link>
-          <Link to="/agents" className='link'>Agents</Link>
-          <Link to="/sign-in" className='link'>Sign In</Link>
-          <Link to="/sign-up" className='link'>Sign Up</Link>
+          <Link to="/" className="link">
+            Home
+          </Link>
+          <Link to="/about" className="link">
+            About
+          </Link>
+          <Link to="/contact" className="link">
+            Contact Us
+          </Link>
+          <Link to="/agents" className="link">
+            Agents
+          </Link>
+          <Link to="/sign-in" className="link">
+            Sign In
+          </Link>
+          <Link to="/sign-up" className="link">
+            Sign Up
+          </Link>
         </div>
       </div>
     </nav>
